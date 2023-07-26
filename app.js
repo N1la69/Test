@@ -1,37 +1,47 @@
-// const intro = document.querySelector('.intro');
-// const video = intro.querySelector('video');
-// const text = intro.querySelector('h1');
-
-// const section = document.querySelector('section');
-// const end = section.querySelector('h1');
-
-// const controller = new ScrollMagic.Controller();
-
-// const scene = new ScrollMagic.Scene({
-//     duration: 15000,
-//     triggerElement: intro,
-//     triggerHook: 0
-// }).setPin(intro).addTo(controller);
-
-// let accel = .2;
-// let scrollpos = 0;
-// let delay = 0;
-
-// scene.on('update', e => {
-//     scrollpos = e.scrollPos / 1000;
-// });
-
-// setInterval(()=>{
-//     delay += (scrollpos - delay) * accel;
-
-//     video.currentTime = scrollpos;
-// },33.33)
-
-
-const html = document.documentElement;
-const canvas = document.querySelector('.bg-scroll');
-const context = canvas.getContext('2d');
-
-const currentFrame = index => {
-    
+function createImageElement(src){
+  const img = new Image();
+  img.src = src;
+  img.style.width = "100%";
+  img.style.height = "100%";
+  img.style.objectFit = "cover";
+  return img;
 }
+
+function playImageSequenceAnimation(){
+  const animationContainer = document.getElementById('animation-container');
+  const totalFrames = 300;
+  const imgPrefix = "Final/Final.";
+  const imgFormat = "png";
+
+  const currentFrame = Math.min(Math.floor((window.scrollY / (document.body.offsetHeight - window.innerHeight)) * totalFrames), totalFrames - 1);
+  console.log(currentFrame);
+
+  const imgName = `${imgPrefix}${currentFrame + 1}.${imgFormat}`;
+
+  const currentImgElement = animationContainer.querySelector("img");
+  if(currentImgElement){
+    currentImgElement.src = imgName;
+  } else {
+    const newImgElement = createImageElement(imgName);
+    animationContainer.appendChild(newImgElement);
+  }
+}
+
+window.addEventListener('scroll', playImageSequenceAnimation);
+playImageSequenceAnimation();
+
+
+var tl = gsap.timeline({scrollTrigger:{
+  trigger: ".animation_conatiner",
+  // markers: true,
+  start: "0% 0%",
+  end: "100% -200%",
+  pin: true,
+  // duration: 9,
+  scrub: 1
+}})
+tl.to(".animation_conatiner h1", {
+  y: "-100vh",
+  duration: 4,
+  scrub: 1
+})

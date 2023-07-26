@@ -1,11 +1,4 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-}
+/*
 .intro{
     height: 100vh;
 }
@@ -22,25 +15,33 @@ html{
     transform: translate(-50%,-50%);
     font-size: 5rem;
 }
+ */
+
+*{
+    /* background: #000; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.animation_conatiner{
+    height: 100vh;
+}
+#animation-container {
+    height: 100vh;
+}
 section{
     position: relative;
     height: 100vh;
-    color: aqua;
-} */
-
-html{
-    height: 100vh;
+    background-color: rgb(199, 26, 64);
 }
-body{
-    background: #000;
-    height: 400vh;
-}
-
-canvas{
-    position: fixed;
-    left: 50%;
+.animation_conatiner h1, section h1{
+    position: absolute;
     top: 50%;
+    left: 50%;
+    color: #fff;
     transform: translate(-50%,-50%);
-    max-height: 100vh;
-    max-width: 100vw;
+    font-size: 5rem;
 }
