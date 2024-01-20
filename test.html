@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+        integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <!-- Review -->
+    <div class="review_content">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!-- SLIDE -->
+                <div class="swiper-slide card">
+                    <div class="top_sec">
+                        <div class="top_container">
+                            <div class="img_container">
+                                <img src="dp.svg" alt="dp">
+                            </div>
+                            <div class="info_container">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <h2>Ranita Das (BPPIMT)</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_sec">
+                        <div class="rev_container">
+                            <p>Awesome</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE -->
+                <div class="swiper-slide card">
+                    <div class="top_sec">
+                        <div class="top_container">
+                            <div class="img_container">
+                                <img src="dp.svg" alt="dp">
+                            </div>
+                            <div class="info_container">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <h2>Aniruddhya Goswami (RIIT)</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_sec">
+                        <div class="rev_container">
+                            <p>Good source of books PDFs and good website design. If possible for you, then please add
+                                C++ notes also with videos. Again nice website</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE -->
+                <div class="swiper-slide card">
+                    <div class="top_sec">
+                        <div class="top_container">
+                            <div class="img_container">
+                                <img src="dp.svg" alt="dp">
+                            </div>
+                            <div class="info_container">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <h2>Sayan Majhi (SKFGI)</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_sec">
+                        <div class="rev_container">
+                            <p>Good</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE -->
+                <div class="swiper-slide card">
+                    <div class="top_sec">
+                        <div class="top_container">
+                            <div class="img_container">
+                                <img src="dp.svg" alt="dp">
+                            </div>
+                            <div class="info_container">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <h2>Kriti Raj (TMSL)</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_sec">
+                        <div class="rev_container">
+                            <p>Every functionality of this website is just great and so satisfactory. Glad to use the
+                                website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+
+    <!-- Necessary Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
