@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description"
+    content="Explore Mr. Chatur GPA calcuator to calculate you sgpa , ygpa & cgpa with efficient results . It is now available for makaut students . makaut gpa calculator">
+  <meta name="keywords"
+    content="MAKAUT GPA CALCULATOR,makaut cgpa calculator, makaut gpa calculator , gpa calculator, makaut sgpa calculator, makaut grade calculator ,   SGPA CALCULATOR,CGPA CALCULATOR,YGPA CALCULATOR,SGPA,YGPA,CGPA, MR.CHATUR SGPA, MR.CHATUR CGPA, MR.CHATUR YGPA, MR CHATUR SGPA, MR CHATUR CGPA, MR CHATUR YGPA , makaut gpa calculator">
+  <meta name="author" content="ASHES DAS">
+  <link rel="shortcut icon" type="x-icon" href="images/logo.jpeg" />
+  <meta name="google-adsense-account" content="ca-pub-7405527865639317" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr. Chatur | GPA Calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" href="/images/logo.jpeg" type="image/x-icon" />
+  <script src="/js/script.js" defer></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GEKZRXMN5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-2GEKZRXMN5");
+  </script>
+
+  <link rel="stylesheet" href="gpa.css" />
+</head>
+
+<body>
+  <div class="MakautGPA head">
+    <h2>MAKAUT GPA CALCULATOR</h2>
+  </div>
+  <div class="MakautGPA head2">
+    <h3>Choose Calculation Type:</h3>
+  </div>
+  <div class="container">
+    <div class="input_box">
+      <input class="input_radio" type="radio" name="calculationType" id="cgpaRadio" value="cgpa"
+        onclick="updateDropDown_Table()" />
+      <label class="label_radio MakautGPA" for="cgpaRadio">CGPA</label>
+    </div>
+    <div class="input_box">
+      <input class="input_radio" type="radio" name="calculationType" id="sgpaRadio" value="sgpa"
+        onclick="updateDropDown_Table()" checked />
+      <label class="label_radio MakautGPA" for="sgpaRadio">SGPA</label>
+    </div>
+    <div class="input_box">
+      <input class="input_radio" type="radio" name="calculationType" id="ygpaRadio" value="ygpa"
+        onclick="updateDropDown_Table()" />
+      <label class="label_radio MakautGPA" for="ygpaRadio">YGPA</label>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="drop1" id="departmentSelect">
+      <select id="deptValue" onchange="updateDropDown_Table()">
+        <option value="cse" selected>
+          <!-- Computer Science and Engineering -->CSE
+        </option>
+        <option value="it"><!--Information Technology-->IT</option>
+        <option value="ece">
+          <!--Electronics & Communication Engineering-->
+          ECE
+        </option>
+        <option value="mech">
+          <!--Mechanical Engineering-->
+          ME
+        </option>
+        <option value="civil">
+          <!--Civil Engineering-->
+          CE
+        </option>
+        <option value="ele">
+          <!--Electrical Engineering-->
+          EE
+        </option>
+      </select>
+    </div>
+    <div class="drop2" id="yearSelect"></div>
+    <div class="drop3" id="semSelect"></div>
+  </div>
+  <table class="table" cellspacing="20px">
+    <thead id="semesterTableHead"></thead>
+    <tbody id="semesterTableBody"></tbody>
+  </table>
+  <center>
+    <h1>
+      <p id="result1"></p>
+    </h1>
+    <div class="buttons">
+      <button class="button1" type="button" onclick="calculate()">
+        Calculate
+      </button>
+      <button class="button2" type="button" onclick="clearInputs()">
+        Reset
+      </button>
+    </div>
+  </center>
+  <script src="/js/updateDOM.js"></script>
+  <script src="gpa.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+    defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"
+    defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"
+    defer></script>
+</body>
+
+</html>
